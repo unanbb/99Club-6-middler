@@ -3,10 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 let filePath = path.join(__dirname, 'day1.txt');
-let input = fs.readFileSync(filePath).toString().split(' ');
-
-const M = +input[0]; // 3
-const N = +input[1]; // 16
+let [M,N] = fs.readFileSync(filePath).toString().split(' ').map(item => +item);
 
 //코드
 for (let i = M; i <= N; i++) {
